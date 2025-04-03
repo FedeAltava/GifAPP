@@ -18,7 +18,6 @@ export const GifGrid = ({ category }) => {
           return <li key={image.id}>{image.title}</li>
         })}
       </ol>
-      
     </>
   )
 };

@@ -24,7 +24,7 @@ export const GifExpertApp = () => {
                     <GifGrid key ={category} category={category}/>
                 )
             })
-        };
+        }
 
     </>
   );
