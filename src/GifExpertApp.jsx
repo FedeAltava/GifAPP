@@ -3,21 +3,23 @@ import { AddCategory } from "./componentes/AddCategory";
 
 export const GifExpertApp = ()=>{
     const [categories, setCategories] = useState(['One Punch','Ramonet','ChiquitoDeLaCalzada']);
-    const onAddCateggory = ()=>{
-        const hero = 'luthien';
-        setCategories((prev) =>[...prev, hero] )
+
+    const onAddCategory = (onNewCategory)=>{
+        setCategories([...categories, onNewCategory])
     }
+
     return (
         <>
             <h1>GifExpertApp</h1>
-            <AddCategory />
+
+            <AddCategory onNewCategory={onAddCategory}/>
+            
             <ol>
                 {categories.map((category)=>{
                     return <li key={category}>{category}</li>;
                 })} 
                 
             </ol>
-            <button onClick={onAddCateggory}>Add</button>
         </>
     )
 }
