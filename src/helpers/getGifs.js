@@ -9,7 +9,8 @@ export const getGifs = async (category) => {
       url: img.images.downsized_medium.url,
     }));
     return gifs;
-  } catch {
+  } catch(error) {
+    console.error("Error al contactar con la api:", error);
     throw new Error("Error al contactar con la api");
   }
 };
